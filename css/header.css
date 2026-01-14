@@ -1,7 +1,7 @@
 ul.nav__right {
     display: flex;
     align-items: center;
-    flex: 2;
+    /* flex: 1.7; */
 }
 .separator{
     width: 1px;
@@ -53,7 +53,7 @@ li.nav__right__item{
 ul.nav__middle {
     cursor: pointer;
     display: flex;
-    flex: 4;
+    /* flex: 4; */
     gap: 20px;
     padding: 10px 0px;
     justify-content: center;
@@ -79,5 +79,6 @@ nav.nav {
     display: flex;
     align-items: center;
     padding: 16px 30px;
+    justify-content: space-between;
 }
 
