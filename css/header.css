@@ -1,7 +1,6 @@
 ul.nav__right {
     display: flex;
     align-items: center;
-    /* flex: 1.7; */
 }
 .separator{
     width: 1px;
@@ -53,7 +52,6 @@ li.nav__right__item{
 ul.nav__middle {
     cursor: pointer;
     display: flex;
-    /* flex: 4; */
     gap: 20px;
     padding: 10px 0px;
     justify-content: center;
@@ -81,4 +79,10 @@ nav.nav {
     padding: 16px 30px;
     justify-content: space-between;
 }
-
+#hamburger{
+    transition: border-radius 0.3s ease, background-color 0.3s ease ;
+}
+#hamburger:hover{
+    background-color: rgb(231, 231, 231);
+    border-radius: 25%;
+}
