@@ -11,7 +11,7 @@ body{
     color: #3c3c3c;
     position: relative;
     font-family: "Mulish", serif;
-    /* height: 5000px; */
+    height: 5000px;
 }
 .header-body{
     display: flex;
