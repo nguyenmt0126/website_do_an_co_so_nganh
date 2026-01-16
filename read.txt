@@ -1,1 +1,8 @@
-Đồ Án Cơ Sở Ngành
+Đồ Án Tốt Cơ Sở Ngành
+
+Đề tài : Website Bán Xe Máy Điện
+
++   Các nhãn hàng như
+        -   Vinfast ( Chính )
+        -   Datbike ( Phụ )
+        -   Yadea   ( Phụ )
