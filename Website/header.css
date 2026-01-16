@@ -1,0 +1,82 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5rem;
+    letter-spacing: -0.02rem;
+    color: #3c3c3c;
+    position: relative;
+    font-family: "Mulish", serif;
+    /* height: 5000px; */
+}
+.header-body{
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 30px;
+    align-items: center;
+}
+.header-logo{
+    display: flex;
+}
+.logo-main{
+    height: 25px;
+    width: auto;
+}
+.nav{
+    display: flex;
+    align-items: center ;
+    list-style: none;
+}
+.nav-items:hover{
+    color: #1464F4;
+}
+.nav-items:active{
+    opacity: .75;
+}
+.nav-items{
+    font-weight: 660;
+    margin-right: 30px;
+    transition: color .3s ease, opacity .15s ease;
+}
+.nav a{
+    text-decoration: none;
+    color: inherit;
+}
+/* Right Bar */
+.hamburger-bar{
+    font-size: 20px;
+    padding: 10px;
+    margin-left: 20px;
+}
+.account:active{
+    opacity: .75;
+}
+.account{
+    text-decoration: none;
+    color: #1464F4;
+    transition: opacity .15s ease;
+}
+
+.register:hover{
+    background-color: white;
+    color: #1464F4;
+}
+.register:active{
+    opacity: .75;
+}
+.register{
+    font-size: 14px;
+    font-weight: 550;
+    text-decoration: none;
+    padding: 15px 25px;
+    margin: 0px 12px 0px 25px;
+    border: 1px solid #1464F4;
+    border-radius: 3px;
+    background-color: #1464F4;
+    color: white;
+    transition: background-color .3s ease, color .3s ease, opacity .15s ease;
+}
