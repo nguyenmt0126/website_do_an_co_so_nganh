@@ -1,62 +1,37 @@
 document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll(".banner").forEach(initSlider);
-});
+  const hero = document.querySelectorAll(".banner");
 
-function initSlider(slider) {
-  const banners = slider.querySelectorAll(".banner-image");
-  const dots = slider.querySelectorAll(".dot");
-  const prevBtn = slider.querySelector(".banner-arrow.prev");
-  const nextBtn = slider.querySelector(".banner-arrow.next");
+  hero.forEach(slider => {
+    const banners = slider.querySelectorAll(".banner-image");
+    const dots = slider.querySelectorAll(".dot");
 
-  let currentIndex = 0;
-  const total = banners.length;
-  let intervalId;
+    if (banners.length === 0 || dots.length === 0) return;
 
-  function showBanner(index) {
-    banners.forEach(b => b.classList.remove("active"));
-    dots.forEach(d => d.classList.remove("active"));
+    let currentIndex = 0;
+    const total = banners.length;
 
-    banners[index].classList.add("active");
-    dots[index].classList.add("active");
+    function showBanner(index) {
+      banners.forEach(b => b.classList.remove("active"));
+      dots.forEach(d => d.classList.remove("active"));
 
-    currentIndex = index;
-  }
+      banners[index].classList.add("active");
+      dots[index].classList.add("active");
 
-  function nextBanner() {
-    showBanner((currentIndex + 1) % total);
-  }
+      currentIndex = index;
+    }
 
-  function prevBanner() {
-    showBanner((currentIndex - 1 + total) % total);
-  }
+    showBanner(0); // 👈 quan trọng
 
-  function startAutoSlide() {
-    intervalId = setInterval(nextBanner, 8400);
-  }
+    setInterval(() => {
+      let nextIndex = currentIndex + 1;
+      if (nextIndex >= total) nextIndex = 0;
+      showBanner(nextIndex);
+    }, 10000);
 
-  function stopAutoSlide() {
-    clearInterval(intervalId);
-  }
-
-  dots.forEach((dot, index) => {
-    dot.addEventListener("click", () => {
-      stopAutoSlide();
-      showBanner(index);
-      startAutoSlide();
+    dots.forEach((dot, index) => {
+      dot.addEventListener("click", () => {
+        showBanner(index);
+      });
     });
   });
-
-  nextBtn?.addEventListener("click", () => {
-    stopAutoSlide();
-    nextBanner();
-    startAutoSlide();
-  });
-
-  prevBtn?.addEventListener("click", () => {
-    stopAutoSlide();
-    prevBanner();
-    startAutoSlide();
-  });
-
-  startAutoSlide();
-}
+});
