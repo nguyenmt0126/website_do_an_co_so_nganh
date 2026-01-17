@@ -1,31 +1,33 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const banners = document.querySelectorAll(".banner-hero");
-  const dots = document.querySelectorAll(".dot");
-  const prevBtn = document.querySelector(".banner-arrow.prev");
-  const nextBtn = document.querySelector(".banner-arrow.next");
+  document.querySelectorAll(".banner").forEach(initSlider);
+});
+
+function initSlider(slider) {
+  const banners = slider.querySelectorAll(".banner-image");
+  const dots = slider.querySelectorAll(".dot");
+  const prevBtn = slider.querySelector(".banner-arrow.prev");
+  const nextBtn = slider.querySelector(".banner-arrow.next");
 
   let currentIndex = 0;
   const total = banners.length;
   let intervalId;
 
   function showBanner(index) {
-    banners.forEach(b => b.classList.remove("banner-active"));
-    dots.forEach(d => d.classList.remove("dot-active"));
+    banners.forEach(b => b.classList.remove("active"));
+    dots.forEach(d => d.classList.remove("active"));
 
-    banners[index].classList.add("banner-active");
-    dots[index].classList.add("dot-active");
+    banners[index].classList.add("active");
+    dots[index].classList.add("active");
 
     currentIndex = index;
   }
 
   function nextBanner() {
-    const next = (currentIndex + 1) % total;
-    showBanner(next);
+    showBanner((currentIndex + 1) % total);
   }
 
   function prevBanner() {
-    const prev = (currentIndex - 1 + total) % total;
-    showBanner(prev);
+    showBanner((currentIndex - 1 + total) % total);
   }
 
   function startAutoSlide() {
@@ -36,7 +38,6 @@ document.addEventListener("DOMContentLoaded", () => {
     clearInterval(intervalId);
   }
 
-  // dot click
   dots.forEach((dot, index) => {
     dot.addEventListener("click", () => {
       stopAutoSlide();
@@ -45,18 +46,17 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // arrow click
-  nextBtn.addEventListener("click", () => {
+  nextBtn?.addEventListener("click", () => {
     stopAutoSlide();
     nextBanner();
     startAutoSlide();
   });
 
-  prevBtn.addEventListener("click", () => {
+  prevBtn?.addEventListener("click", () => {
     stopAutoSlide();
     prevBanner();
     startAutoSlide();
   });
 
   startAutoSlide();
-});
+}

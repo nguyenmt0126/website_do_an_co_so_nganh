@@ -1,0 +1,39 @@
+.banner .banner-image{
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+.banner{
+    position: relative;
+    width: 100%;
+    height: 800px;
+    overflow: hidden;
+}
+.banner .active {
+    opacity: 1;
+    z-index: 1;
+    transition: opacity 0.6s ease;
+}
+
+.dot-main .active{
+    background-color: white;
+}
+.dot{   
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.dot-main{
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    padding: 10px 15px;
+    z-index: 100;
+}
