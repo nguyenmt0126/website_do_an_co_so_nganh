@@ -1,3 +1,7 @@
+*{
+    font-family: "Mulish", Arial, Helvetica, sans-serif;
+}
+
 .header{
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
@@ -50,8 +54,8 @@
 /* Banner */
 
 .carousel-indicators [data-bs-target] {
-    width: 10px !important;
-    height: 10px !important;
+    width: 12px !important;
+    height: 12px !important;
     border: none !important;
     margin: 0 6px;
     border-radius: 50%;
@@ -83,6 +87,43 @@
 }
 
 .vehicle_selector  .carousel-indicators [data-bs-target] {
-    background-color: black !important;
+    background-color: rgb(60, 60, 60) !important;
+}
+.vehicle_selector .carousel-indicators {
+    bottom: 180px !important;
+}
+.carousel-fade .carousel-item {
+  transition: opacity .9s ease-in-out;
+}
+.vehicle_selector-info {
+    border-top: 1px solid #dae2e3;
 }
 
+.header .nav-item{
+    font-weight: 500 !important;
+    padding: 5px 10px;
+}
+
+.vehicle_selector .carousel{
+    height: 800px !important;
+}
+
+.vehicle_selector .btn-setting{
+    background-color: #ccc;
+    font-size: 16px !important;
+    padding: 15px 50px;
+    margin: 10px;
+}
+
+.vehicle_selector .btn-bough{
+    background-color: #1664f5;
+}
+.vehicle_selector .btn-bough:hover{
+    background-color: white;
+    color: #1664f5;
+}
+
+.vehicle_selector .btn-checked{
+    background-color: white;
+    color: #1664f5;
+}
