@@ -1,0 +1,88 @@
+.header{
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+.header__site{
+    padding: 10px;
+    background-color: white;
+}
+.nav .nav-link{
+    color: black;
+}
+.nav .nav-item:active{
+    opacity: .75;
+}
+.nav .nav-link:hover{
+    color: #1664f5;
+}
+.navbar .nav-link:hover{
+    color: #1664f5;
+}
+
+.navbar .divider {
+  width: 1px;
+  height: 20px;
+  background: #ccc;
+}
+
+.navbar .action__button{
+    font-size: 12px;
+    padding: 10px 35px;
+}
+.navbar .action__button:hover{
+    background-color: white;
+    color: #1664f5;
+}
+
+.hamburger{
+    padding: 5px 15px;
+    font-size: 20px;
+    transition: background-color .3s ease, border-radius .3s ease;
+}
+.hamburger:hover{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 50px;
+}
+.hamburger:active{
+    opacity: .7;
+}
+
+/* Banner */
+
+.carousel-indicators [data-bs-target] {
+    width: 10px !important;
+    height: 10px !important;
+    border: none !important;
+    margin: 0 6px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    background-color: white !important;
+    bottom: 10% !important;
+    opacity: 1;
+}
+
+.banner__hero .carousel-indicators {
+    bottom: 1% !important;
+}
+
+.carousel-control-prev {
+    filter: invert();
+}
+
+.carousel-control-next, .carousel-control-prev {
+    width: 5% !important;
+}
+.banner__hero .carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1);
+}
+
+.vehicle_selector .carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(0);
+}
+
+.vehicle_selector  .carousel-indicators [data-bs-target] {
+    background-color: black !important;
+}
+
