@@ -90,7 +90,7 @@
     background-color: rgb(60, 60, 60) !important;
 }
 .vehicle_selector .carousel-indicators {
-    bottom: 180px !important;
+    bottom: 210px !important;
 }
 .carousel-fade .carousel-item {
   transition: opacity .9s ease-in-out;
@@ -105,7 +105,7 @@
 }
 
 .vehicle_selector .carousel{
-    height: 800px !important;
+    height: 850px !important;
 }
 
 .vehicle_selector .btn-setting{
@@ -126,4 +126,21 @@
 .vehicle_selector .btn-checked{
     background-color: white;
     color: #1664f5;
+}
+
+.card__section .card{
+    width: 300px !important;
+    margin: 10px !important;
+    border: none !important;
+    background-color: #f5f7f7;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card__section .card:hover{
+    transform: scale(1.1);
+     box-shadow: 0 10px 5px rgba(0,0,0,0.25);
+}
+
+body{
+    height: 10000px;
 }
