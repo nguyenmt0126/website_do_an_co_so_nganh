@@ -138,9 +138,8 @@
 
 .card__section .card:hover{
     transform: scale(1.1);
-     box-shadow: 0 10px 5px rgba(0,0,0,0.25);
+     box-shadow: 0 5px 5px rgba(0,0,0,0.25);
 }
-
-body{
-    height: 10000px;
+.charge__section{
+    margin: 5% 0px !important;
 }
